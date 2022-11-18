@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <View
       style={{
@@ -12,6 +12,7 @@ const LoginScreen = () => {
       }}
     >
       <Text style={{ color: "white" }}>LogIn Screen</Text>
+      <Button title='Go Back' onPress={navigation.goBack}></Button>
     </View>
   );
 };

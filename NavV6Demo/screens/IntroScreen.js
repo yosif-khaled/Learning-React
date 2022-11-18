@@ -1,7 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-const IntroScreen = () => {
+const IntroScreen = ({navigation}) => {
+  const navigate = (screen)=>{
+    navigation.navigate(screen)
+  }
   return (
     <View
       style={{
@@ -12,6 +15,7 @@ const IntroScreen = () => {
       }}
     >
       <Text style={{ color: "white" }}>Intro Screen</Text>
+      <Button title="Go TO Login" onPress={()=>navigate('Login')}></Button>
     </View>
   );
 };
